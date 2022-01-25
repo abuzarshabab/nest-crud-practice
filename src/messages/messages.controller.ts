@@ -4,10 +4,7 @@ import { CreateMessageDto } from './dtos/cratate.message.dto';
 
 @Controller('messages')
 export class MessagesController {
-  messageService: MessageServices;
-  constructor(private readonly appService: MessageServices) {
-    this.messageService = new MessageServices();
-  }
+  constructor(public appService: MessageServices) {}
 
   @Get()
   getHello(): string {
